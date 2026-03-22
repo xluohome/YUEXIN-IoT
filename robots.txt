@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /tmp/
 
-Sitemap: https://www.doodle-iot.com/sitemap.xml
+Sitemap: https://yuexin-iot.xluo.com/sitemap.xml
