@@ -1449,6 +1449,11 @@
   // ── Public API ───────────────────────────────────────────────
   window.i18n = {
     getLang: function() {
+      // 优先读取 URL 参数
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      if (urlLang && translations[urlLang]) return urlLang;
+      // 其次 localStorage
       return localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
     },
     setLang: function(lang) {
